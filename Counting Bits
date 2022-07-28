@@ -1,0 +1,15 @@
+class Solution {
+    
+    public int getBinary(int n){
+        if(n == 0)
+            return 0;
+        return getBinary(n/2)+n%2;
+    }
+    public int[] countBits(int n) {
+        int[] sol = new int[n+1];
+        for(int i = 0 ; i < n+1 ; i++){
+            sol[i] = getBinary(i);
+        }
+        return sol;
+    }
+}
